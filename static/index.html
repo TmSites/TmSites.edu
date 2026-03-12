@@ -3,21 +3,48 @@
     <head>
         <title>TmSites</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover">
         <link rel="stylesheet" href="tmsites.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
+        <button class="toggle-menu" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <header>
-            <nav>
-                <div class="head">TmSites</div>
-                <ul>
-                    <li><a href="#about">TmSites barada</a></li>
-                    <li><a href="#terms">Terminler</a></li>
-                    <li><a href="#contact">Habarlaşmak</a></li>
-                </ul>
+            <nav id="sidebar">
+                <div class="sidebar-top">
+                    <div class="head">TmSites</div>
+                    <ul>
+                       <li><a href="#about">TmSites barada</a></li>
+                       <li><a href="#terms">Terminler</a></li>
+                       <li><a href="#contact">Habarlaşmak</a></li>
+                       <li><a href="javascript:void(0)" class="girish">Giriş</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-settings">
+                    <hr>
+                    <p class="setTitle">Sazlamalar</p>
+
+                    <div class="setting-row">
+                        <button id="themeBtn" title="Gije&Gunduz"><i class="fa-solid fa-moon"></i>   Yagtylyk</button>
+                        <select id="langSelect">
+                            <option>&#128069;Dil saylan</option>
+                            <option value="tm">Türkmençe</option>
+                            <option value="en">English</option>
+                        </select>
+                        <select id="fontSize">
+                            <option selected>&#128207; Yazgy olcegi</option>
+                            <option value="16px">Kiçi</option>
+                            <option value="18px">Orta</option>
+                            <option value="22px">Uly</option>
+                        </select>
+                    </div>
+                </div>
             </nav>
         </header>
+        <div class="overlay" id="overlay"></div>
         <main>
             <section id="about" class="hero">
                 <div class="hero-content">
@@ -71,5 +98,6 @@
             </section>
         </main>
         <footer><p>&copy; TmSites. Sizin üçin!</p></footer>
+        <script src="tmsites.js"></script>
     </body>
 </html>

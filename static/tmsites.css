@@ -4,7 +4,7 @@
     --background-color: #000000;
     --text-color: #0A0A0A; 
     --light-color: #c3f5c3; 
-    --card-shadow: --card-shadow: 0 0 15px rgba(114,178,4,0.5);
+    --card-shadow:0 0 15px rgba(114,178,4,0.5);
     --buton-color: #61FF87; 
 }
 
@@ -26,31 +26,77 @@ header{
     background-color: var(--light-color);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    position: sticky;
+    position:fixed;
+    left: 0;
     top: 0;
+    height: 100vh;
+    width: 250px;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 nav{
     display: flex;
+    flex-direction: column;
+    padding:2rem 1rem;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    height: 100%;
 }
 
+.sidebar-top ul{
+    list-style: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-settings{
+    padding-top: 20px;
+}
+
+.sidebar-settings hr{
+    border: 0.5px solid var(--primary-color);
+    margin-bottom: 15px;
+    opacity: 0.3;
+}
+
+.setTitle{
+    font-size: 14px;
+}
+
+.setting-row{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.setting-row button, .setting-row select{
+    background: var(--buton-color);
+    border-radius: 5px;
+    padding:5px ;
+    cursor: pointer;
+    width:100%;
+}
+body.dark-mode {
+    --background-color: #0c0c0c;
+    --text-color:#ffffff;
+    --light-color:#1a1a1a;
+}
 .head{
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
 
+
+}
+main, footer{
+    margin-left: 250px;
+    transition: margin 0.3s ease;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-}
+
 
 nav ul li a{
     text-decoration: none;
@@ -181,7 +227,48 @@ footer{
     font-weight: bold;
     }
 
+.menu-toggle{
+    display: none;
+}
+
 @media (max-width:768px){
+    header{
+        left: -250px;
+    }
+    header:active{
+        left: 0;
+    }
+    .toggle-menu{
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1100;
+        background: var(--primary-color);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        color: var(--light-color);
+    }
+    main, footer{
+        margin-left: 0;
+    }
+    nav{
+        flex-direction: column;
+        padding: 5px;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    nav ul li a{
+        display: block;
+        padding: 8px 0;
+        font-size: 16px;
+    }
     .categories{
         grid-template-columns: 1fr;
     }
@@ -190,4 +277,9 @@ footer{
         flex-direction: column;
         text-align: center;
     }
+}
+
+.girish{
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;  
 }
