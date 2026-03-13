@@ -62,7 +62,11 @@ nav{
 }
 
 .setTitle{
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 10px;
 }
 
 .setting-row{
@@ -235,7 +239,7 @@ footer{
     header{
         left: -250px;
     }
-    header:active{
+    header.active{
         left: 0;
     }
     .toggle-menu{
@@ -248,7 +252,7 @@ footer{
         border: none;
         padding: 10px;
         border-radius: 5px;
-        color: var(--light-color);
+        color: white;
     }
     main, footer{
         margin-left: 0;
