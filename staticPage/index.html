@@ -2,19 +2,49 @@
 <html lang="en">
     <head>
         <title>TmSites</title>
-        <link rel="stylesheet" href="style.css?v=1.1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover">
+        <link rel="stylesheet" href="tmsites.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
+        <button class="toggle-menu" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <header>
-            <nav>
-                <div class="head">TmSites</div>
-                <ul>
-                    <li><a href="#about">TmSites barada</a></li>
-                    <li><a href="#terms">Terminler</a></li>
-                    <li><a href="#contact">Habarlaşmak</a></li>
-                </ul>
+            <nav id="sidebar">
+                <div class="sidebar-top">
+                    <div class="head">TmSites</div>
+                    <ul>
+                       <li><a href="#about">TmSites barada</a></li>
+                       <li><a href="#terms">Terminler</a></li>
+                       <li><a href="#contact">Habarlaşmak</a></li>
+                       <li><a href="javascript:void(0)" id="loginBtn" class="girish">Giriş</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-settings">
+                    <hr>
+                    <p class="setTitle">Sazlamalar</p>
+
+                    <div class="setting-row">
+                
+                        <select id="langSelect">
+                            <option value="" selected disabled>&#128069;Dil saylan</option>
+                            <option value="tm">Türkmençe</option>
+                            <option value="en">English</option>
+                        </select>
+                        <select id="fontSize">
+                            <option value="" selected disabled>&#128207; Yazgy olcegi</option>
+                            <option value="16px">Kiçi</option>
+                            <option value="18px">Orta</option>
+                            <option value="22px">Uly</option>
+                        </select>
+                    </div>
+                </div>
             </nav>
         </header>
+        <div class="overlay" id="overlay"></div>
         <main>
             <section id="about" class="hero">
                 <div class="hero-content">
@@ -34,13 +64,12 @@
             <section id="terms" class="termin">
                 <h2>Terminler</h2>
                 <div class="categories">
-                    <div class="category">Web Programmirleme</div>
-                    <div class="category">Software&Hardware gurallary</div>
-                    <div class="category">Kompýuter injenerçiligi</div>
-                    <div class="category">Linux</div>
-                    <div class="category">Kiperhowpsuzlyk</div>
-                    <div class="category">Maglumat gurluşlary we algoritmler</div>
-                </div>
+                    <a href="http://127.0.0.1:5500/categories/web/web.html" class="category">Web Programmirleme</a>
+                    <a href="tools.html" class="category">Software & Hardware gurallary</a>
+                    <a href="ce.html" class="category">Kompýuter injenerçiligi</a>
+                    <a href="linux.html" class="category">Linux</a>
+                    <a href="cyber.html" class="category">Kiberhowpsuzlyk</a>
+                    <a href="dsa.html" class="category">Maglumat gurluşlary we algoritmler</a>
             </section>
             <section id="contact" class="contact">
                 <h2>Habarlaşmak</h2>
@@ -48,12 +77,27 @@
                     habarlaşyp bilersiňiz!
                 </p>
                 <ul>
-                    <li><a href="mailto:tmsites@gmail.com">Email</a></li>
-                    <li><a href="https://www.instagram.com/tm.sites/">Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/in/bagul-kakamyradova-aa2538343?utm">LinkedIn</a></li>
+                    <li>
+                        <a href="mailto:turkmensites@gmail.com">
+                        <i class="fa-solid fa-envelope"></i> Gmail
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/tm.sites/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+
+                     <li>
+                        <a href="https://www.linkedin.com/in/bagul-kakamyradova-aa2538343" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
                 </ul>
             </section>
         </main>
+        <footer><p>&copy; TmSites. Sizin üçin!</p></footer>
+        <script src="tmsites.js"></script>
     </body>
-    <footer><p>&copy; TmSites. Sizin üçin!</p></footer>
 </html>
