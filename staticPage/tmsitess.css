@@ -1,11 +1,11 @@
 :root {
     --primary-color: #72b204;
-    --secondary-color: #0A0A0A;
+    --secondary-color: #7CFF4F;
     --background-color: #000000;
     --text-color: #0A0A0A;
     --light-color: #c3f5c3;
     --card-shadow: 0 0 15px rgba(114, 178, 4, 0.5);
-    --buton-color: #72b204;
+    --buton-color: #61FF87;
 }
 
 *{
